@@ -1,0 +1,2021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220922 13:34:59.004" rpa="false" schemaversion="3">
+<suite id="s1" name="Requestsoap" source="C:\allure_report\ALLURE_REPORT\Tests\requestsoap.robot">
+<test id="s1-t1" name="Returning All the list of Methods Using Get Method" line="9">
+<kw name="Create Header Dictionary" library="Common_keywords">
+<var>&amp;{header_dictionary}</var>
+<msg timestamp="20220922 13:34:59.327" level="TRACE">Arguments: [  ]</msg>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header_dictionary}</var>
+<arg>Content-Type=${content_text_xml}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220922 13:34:59.327" level="TRACE">Arguments: [ 'Content-Type=${content_text_xml}' ]</msg>
+<msg timestamp="20220922 13:34:59.327" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:34:59.327" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:34:59.327" endtime="20220922 13:34:59.327"/>
+</kw>
+<msg timestamp="20220922 13:34:59.327" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:34:59.327" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:34:59.327" endtime="20220922 13:34:59.327"/>
+</kw>
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${base_url}${end_point}</arg>
+<arg>headers=${header_dictionary}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20220922 13:34:59.327" level="TRACE">Arguments: [ 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso' | headers={'Content-Type': 'text/xml; charset=utf-8'} ]</msg>
+<msg timestamp="20220922 13:34:59.342" level="DEBUG">Starting new HTTP connection (1): webservices.oorsprong.org:80</msg>
+<msg timestamp="20220922 13:34:59.791" level="DEBUG">http://webservices.oorsprong.org:80 "GET /websamples.countryinfo/CountryInfoService.wso HTTP/1.1" 200 1666</msg>
+<msg timestamp="20220922 13:34:59.791" level="INFO">GET Request : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ path_url=/websamples.countryinfo/CountryInfoService.wso 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'text/xml; charset=utf-8'} 
+ body=None 
+ </msg>
+<msg timestamp="20220922 13:34:59.791" level="INFO">GET Response : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'private, max-age=0', 'Content-Type': 'text/html; charset=utf-8', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Server': 'Microsoft-IIS/8.5', 'Web-Service': 'DataFlex 19.1', 'Date': 'Thu, 22 Sep 2022 08:04:58 GMT', 'Content-Length': '1666'} 
+ body=&lt;html xmlns:wso="http://www.dataaccess.com/schemas/WebServiceMetaData"&gt;
+  &lt;head&gt;
+    &lt;META http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+    &lt;style type="text/css"&gt;
+                    body
+                    {
+                        margin-left: 2em;
+                    }                
+                    h1
+                    {
+                        margin-left: -0.8em;
+                    }                
+                    h2
+                    {
+                        margin-left: -0.8em;
+                        border-top: 1px solid;
+                    }                
+                    h3
+                    {
+                        margin-left: -0.8em;
+                    }                
+                    .title
+                    {
+                        margin-left: -0.8em;
+                        color: #000080;
+                        font-size: 1.7em;
+                        background-color: #99ccff;
+                        padding-top: 0.3em;
+                        padding-bottom: 0.3em;
+                    } 
+                    .intro
+                    {
+                        margin-left: -0.8em;
+                    }
+                    .frmheader
+                    {
+                        background: #dcdcdc;
+                        padding-top: 0.1em;
+                        padding-bottom: 0.2em;
+                    }
+                    .code
+                    {
+                        font-family: 'Courier New';
+                        background-color: lightyellow;
+                        padding: 0.3em;
+                    }
+                    font.value
+                    {
+                        color: darkblue;
+                        font: bold;
+                    }
+                    font.key
+                    {
+                        color: darkgreen;
+                        font: bold;
+                    }
+                &lt;/style&gt;
+    &lt;title&gt;DataFlex Web Service for Country information&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;center&gt;
+      &lt;p class="title"&gt;DataFlex Web Service for Country information&lt;/p&gt;
+    &lt;/center&gt;
+    &lt;p&gt;
+      &lt;span&gt;This DataFlex Web Service opens up country information. 2 letter ISO codes are used for Country code. There are functions to retrieve the used Currency, Language, Capital City, Continent and Telephone code.&lt;/span&gt;
+    &lt;/p&gt;
+                The following operations are available. For a formal definition, please review the
+                &lt;a href="/websamples.countryinfo/CountryInfoService.wso?WSDL"&gt;Service Description&lt;/a&gt;.
+        &lt;ul&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=ListOfContinentsByName"&gt;ListOfContinentsByName&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a list of continents ordered by name.&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=ListOfContinentsByCode"&gt;ListOfContinentsByCode&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a list of continents ordered by code.&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=ListOfCurrenciesByName"&gt;ListOfCurrenciesByName&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a list of currencies ordered by name.&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=ListOfCurrenciesByCode"&gt;ListOfCurrenciesByCode&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a list of currencies ordered by code.&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=CurrencyName"&gt;CurrencyName&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns the name of the currency (if found)&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=ListOfCountryNamesByCode"&gt;ListOfCountryNamesByCode&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a list of all stored counties ordered by ISO code&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=ListOfCountryNamesByName"&gt;ListOfCountryNamesByName&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a list of all stored counties ordered by country name&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=ListOfCountryNamesGroupedByContinent"&gt;ListOfCountryNamesGroupedByContinent&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a list of all stored counties grouped per continent&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=CountryName"&gt;CountryName&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Searches the database for a country by the passed ISO country code&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=CountryISOCode"&gt;CountryISOCode&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;This function tries to found a country based on the passed country name.&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=CapitalCity"&gt;CapitalCity&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns the  name of the captial city for the passed country code&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=CountryCurrency"&gt;CountryCurrency&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns the currency ISO code and name for the passed country ISO code&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=CountryFlag"&gt;CountryFlag&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a link to a picture of the country flag&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=CountryIntPhoneCode"&gt;CountryIntPhoneCode&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns the internation phone code for the passed ISO country code&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=FullCountryInfo"&gt;FullCountryInfo&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a struct with all the stored country information. Pass the ISO country code&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=FullCountryInfoAllCountries"&gt;FullCountryInfoAllCountries&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns an array with all countries and all the language information stored&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=CountriesUsingCurrency"&gt;CountriesUsingCurrency&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns a list of all countries that use the same currency code. Pass a ISO currency code&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=ListOfLanguagesByName"&gt;ListOfLanguagesByName&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns an array of languages ordered by name&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=ListOfLanguagesByCode"&gt;ListOfLanguagesByCode&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Returns an array of languages ordered by code&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=LanguageName"&gt;LanguageName&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Find a language name based on the passed ISO language code&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;li&gt;
+        &lt;b&gt;&lt;a href="/websamples.countryinfo/CountryInfoService.wso?op=LanguageISOCode"&gt;LanguageISOCode&lt;/a&gt;&lt;/b&gt;
+        &lt;br&gt;
+        &lt;span&gt;Find a language ISO code based on the passed language name&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;p&gt;&lt;/p&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ 
+ </msg>
+<msg timestamp="20220922 13:34:59.791" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20220922 13:34:59.791" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220922 13:34:59.327" endtime="20220922 13:34:59.791"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${actual_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220922 13:34:59.806" level="TRACE">Arguments: [ 200 ]</msg>
+<msg timestamp="20220922 13:34:59.806" level="DEBUG">Argument types are:
+&lt;class 'int'&gt;</msg>
+<msg timestamp="20220922 13:34:59.806" level="TRACE">Return: '200'</msg>
+<msg timestamp="20220922 13:34:59.806" level="INFO">${actual_code} = 200</msg>
+<status status="PASS" starttime="20220922 13:34:59.806" endtime="20220922 13:34:59.806"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual_code}</arg>
+<arg>${success_Status_code}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20220922 13:34:59.806" level="TRACE">Arguments: [ '200' | '200' ]</msg>
+<msg timestamp="20220922 13:34:59.806" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg timestamp="20220922 13:34:59.806" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220922 13:34:59.806" endtime="20220922 13:34:59.806"/>
+</kw>
+<doc>Returns all the list of Methods</doc>
+<status status="PASS" starttime="20220922 13:34:59.327" endtime="20220922 13:34:59.813"/>
+</test>
+<test id="s1-t2" name="Returning a list of continents ordered by name Using Post Method" line="16">
+<kw name="Create Header Dictionary" library="Common_keywords">
+<var>&amp;{header_dictionary}</var>
+<msg timestamp="20220922 13:34:59.813" level="TRACE">Arguments: [  ]</msg>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header_dictionary}</var>
+<arg>Content-Type=${content_text_xml}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220922 13:34:59.813" level="TRACE">Arguments: [ 'Content-Type=${content_text_xml}' ]</msg>
+<msg timestamp="20220922 13:34:59.813" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:34:59.813" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:34:59.813" endtime="20220922 13:34:59.813"/>
+</kw>
+<msg timestamp="20220922 13:34:59.853" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:34:59.853" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:34:59.813" endtime="20220922 13:34:59.853"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${base_url}${end_point}</arg>
+<arg>headers=${header_dictionary}</arg>
+<arg>data=${payload_ListOfContinentsByName}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20220922 13:34:59.869" level="TRACE">Arguments: [ 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso' | headers={'Content-Type': 'text/xml; charset=utf-8'} | data='&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;soap:Body&gt;&lt;ListOfContinentsByName xmlns="http://www.oorsprong.org/websamples.countryinfo"&gt;&lt;/ListOfContinentsByName&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;' ]</msg>
+<msg timestamp="20220922 13:34:59.869" level="DEBUG">Starting new HTTP connection (1): webservices.oorsprong.org:80</msg>
+<msg timestamp="20220922 13:35:00.306" level="DEBUG">http://webservices.oorsprong.org:80 "POST /websamples.countryinfo/CountryInfoService.wso HTTP/1.1" 200 466</msg>
+<msg timestamp="20220922 13:35:00.306" level="INFO">POST Request : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ path_url=/websamples.countryinfo/CountryInfoService.wso 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'text/xml; charset=utf-8', 'Content-Length': '252'} 
+ body=&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;soap:Body&gt;&lt;ListOfContinentsByName xmlns="http://www.oorsprong.org/websamples.countryinfo"&gt;&lt;/ListOfContinentsByName&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt; 
+ </msg>
+<msg timestamp="20220922 13:35:00.306" level="INFO">POST Response : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'private, max-age=0', 'Content-Type': 'text/xml; charset=utf-8', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Server': 'Microsoft-IIS/8.5', 'Web-Service': 'DataFlex 19.1', 'Date': 'Thu, 22 Sep 2022 08:04:58 GMT', 'Content-Length': '466'} 
+ body=&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;m:ListOfContinentsByNameResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo"&gt;
+      &lt;m:ListOfContinentsByNameResult&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;AF&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Africa&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;AN&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Antarctica&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;AS&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Asia&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;EU&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Europe&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;OC&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Ocenania&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;AM&lt;/m:sCode&gt;
+          &lt;m:sName&gt;The Americas&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+      &lt;/m:ListOfContinentsByNameResult&gt;
+    &lt;/m:ListOfContinentsByNameResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt; 
+ </msg>
+<msg timestamp="20220922 13:35:00.306" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20220922 13:35:00.314" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220922 13:34:59.869" endtime="20220922 13:35:00.314"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${actual_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220922 13:35:00.314" level="TRACE">Arguments: [ 200 ]</msg>
+<msg timestamp="20220922 13:35:00.314" level="DEBUG">Argument types are:
+&lt;class 'int'&gt;</msg>
+<msg timestamp="20220922 13:35:00.314" level="TRACE">Return: '200'</msg>
+<msg timestamp="20220922 13:35:00.314" level="INFO">${actual_code} = 200</msg>
+<status status="PASS" starttime="20220922 13:35:00.314" endtime="20220922 13:35:00.314"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual_code}</arg>
+<arg>${success_Status_code}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20220922 13:35:00.330" level="TRACE">Arguments: [ '200' | '200' ]</msg>
+<msg timestamp="20220922 13:35:00.330" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg timestamp="20220922 13:35:00.330" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220922 13:35:00.330" endtime="20220922 13:35:00.330"/>
+</kw>
+<doc>Returns a list of continents ordered by name.</doc>
+<status status="PASS" starttime="20220922 13:34:59.813" endtime="20220922 13:35:00.330"/>
+</test>
+<test id="s1-t3" name="Returning a list of continents ordered by code Using Post Method" line="23">
+<kw name="Create Header Dictionary" library="Common_keywords">
+<var>&amp;{header_dictionary}</var>
+<msg timestamp="20220922 13:35:00.330" level="TRACE">Arguments: [  ]</msg>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header_dictionary}</var>
+<arg>Content-Type=${content_text_xml}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220922 13:35:00.330" level="TRACE">Arguments: [ 'Content-Type=${content_text_xml}' ]</msg>
+<msg timestamp="20220922 13:35:00.330" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:35:00.345" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:35:00.330" endtime="20220922 13:35:00.345"/>
+</kw>
+<msg timestamp="20220922 13:35:00.345" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:35:00.345" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:35:00.330" endtime="20220922 13:35:00.345"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${base_url}${end_point}</arg>
+<arg>headers=${header_dictionary}</arg>
+<arg>data=${payload_ListOfContinentsByCode}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20220922 13:35:00.345" level="TRACE">Arguments: [ 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso' | headers={'Content-Type': 'text/xml; charset=utf-8'} | data='&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;soap:Body&gt;&lt;ListOfContinentsByCode xmlns="http://www.oorsprong.org/websamples.countryinfo"&gt;&lt;/ListOfContinentsByCode&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;' ]</msg>
+<msg timestamp="20220922 13:35:00.345" level="DEBUG">Starting new HTTP connection (1): webservices.oorsprong.org:80</msg>
+<msg timestamp="20220922 13:35:00.816" level="DEBUG">http://webservices.oorsprong.org:80 "POST /websamples.countryinfo/CountryInfoService.wso HTTP/1.1" 200 488</msg>
+<msg timestamp="20220922 13:35:00.816" level="INFO">POST Request : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ path_url=/websamples.countryinfo/CountryInfoService.wso 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'text/xml; charset=utf-8', 'Content-Length': '252'} 
+ body=&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;soap:Body&gt;&lt;ListOfContinentsByCode xmlns="http://www.oorsprong.org/websamples.countryinfo"&gt;&lt;/ListOfContinentsByCode&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt; 
+ </msg>
+<msg timestamp="20220922 13:35:00.816" level="INFO">POST Response : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'private, max-age=0', 'Content-Type': 'text/xml; charset=utf-8', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Server': 'Microsoft-IIS/8.5', 'Web-Service': 'DataFlex 19.1', 'Date': 'Thu, 22 Sep 2022 08:04:59 GMT', 'Content-Length': '488'} 
+ body=&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;m:ListOfContinentsByCodeResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo"&gt;
+      &lt;m:ListOfContinentsByCodeResult&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;AF&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Africa&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;AM&lt;/m:sCode&gt;
+          &lt;m:sName&gt;The Americas&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;AN&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Antarctica&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;AS&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Asia&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;EU&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Europe&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+        &lt;m:tContinent&gt;
+          &lt;m:sCode&gt;OC&lt;/m:sCode&gt;
+          &lt;m:sName&gt;Ocenania&lt;/m:sName&gt;
+        &lt;/m:tContinent&gt;
+      &lt;/m:ListOfContinentsByCodeResult&gt;
+    &lt;/m:ListOfContinentsByCodeResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt; 
+ </msg>
+<msg timestamp="20220922 13:35:00.816" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20220922 13:35:00.816" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220922 13:35:00.345" endtime="20220922 13:35:00.816"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${actual_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220922 13:35:00.831" level="TRACE">Arguments: [ 200 ]</msg>
+<msg timestamp="20220922 13:35:00.831" level="DEBUG">Argument types are:
+&lt;class 'int'&gt;</msg>
+<msg timestamp="20220922 13:35:00.831" level="TRACE">Return: '200'</msg>
+<msg timestamp="20220922 13:35:00.831" level="INFO">${actual_code} = 200</msg>
+<status status="PASS" starttime="20220922 13:35:00.816" endtime="20220922 13:35:00.831"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual_code}</arg>
+<arg>${success_Status_code}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20220922 13:35:00.831" level="TRACE">Arguments: [ '200' | '200' ]</msg>
+<msg timestamp="20220922 13:35:00.831" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg timestamp="20220922 13:35:00.831" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220922 13:35:00.831" endtime="20220922 13:35:00.831"/>
+</kw>
+<doc>Returns a list of continents ordered by code.</doc>
+<status status="PASS" starttime="20220922 13:35:00.330" endtime="20220922 13:35:00.831"/>
+</test>
+<test id="s1-t4" name="Returning a list of currencies ordered by name Using Post Method" line="30">
+<kw name="Create Header Dictionary" library="Common_keywords">
+<var>&amp;{header_dictionary}</var>
+<msg timestamp="20220922 13:35:00.831" level="TRACE">Arguments: [  ]</msg>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header_dictionary}</var>
+<arg>Content-Type=${content_text_xml}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220922 13:35:00.831" level="TRACE">Arguments: [ 'Content-Type=${content_text_xml}' ]</msg>
+<msg timestamp="20220922 13:35:00.831" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:35:00.831" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:35:00.831" endtime="20220922 13:35:00.831"/>
+</kw>
+<msg timestamp="20220922 13:35:00.847" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:35:00.847" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:35:00.831" endtime="20220922 13:35:00.847"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${base_url}${end_point}</arg>
+<arg>headers=${header_dictionary}</arg>
+<arg>data=${payload_ListOfCurrenciesByName}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20220922 13:35:00.847" level="TRACE">Arguments: [ 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso' | headers={'Content-Type': 'text/xml; charset=utf-8'} | data='&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;soap:Body&gt;&lt;ListOfCurrenciesByName xmlns="http://www.oorsprong.org/websamples.countryinfo"&gt;&lt;/ListOfCurrenciesByName&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;' ]</msg>
+<msg timestamp="20220922 13:35:00.847" level="DEBUG">Starting new HTTP connection (1): webservices.oorsprong.org:80</msg>
+<msg timestamp="20220922 13:35:01.233" level="DEBUG">http://webservices.oorsprong.org:80 "POST /websamples.countryinfo/CountryInfoService.wso HTTP/1.1" 200 2995</msg>
+<msg timestamp="20220922 13:35:01.233" level="INFO">POST Request : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ path_url=/websamples.countryinfo/CountryInfoService.wso 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'text/xml; charset=utf-8', 'Content-Length': '252'} 
+ body=&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;soap:Body&gt;&lt;ListOfCurrenciesByName xmlns="http://www.oorsprong.org/websamples.countryinfo"&gt;&lt;/ListOfCurrenciesByName&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt; 
+ </msg>
+<msg timestamp="20220922 13:35:01.233" level="INFO">POST Response : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'private, max-age=0', 'Content-Type': 'text/xml; charset=utf-8', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Server': 'Microsoft-IIS/8.5', 'Web-Service': 'DataFlex 19.1', 'Date': 'Thu, 22 Sep 2022 08:04:59 GMT', 'Content-Length': '2995'} 
+ body=&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;m:ListOfCurrenciesByNameResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo"&gt;
+      &lt;m:ListOfCurrenciesByNameResult&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AFA&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Afghanis&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;DZD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Algeria Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MGA&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Ariary&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AWG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Aruba Guilders (also called Florins)&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AUD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Australian Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BSD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bahamas Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BHD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bahrain Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;THB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Baht&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PAB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Balboa&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BBD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Barbados Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BZD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Belize Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BMD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bermuda Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ETB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Birr&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;VEB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bolivares&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BOB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bolivianos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BRL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Brazil Real&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BND&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Brunei Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CAD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Canadian Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KYD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Cayman Island Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GHC&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Cedis&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CRC&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Colones&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SVC&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Colones&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XAF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Communauté Financière Africaine Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XOF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Communauté Financière Africaine Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XPF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Comptoirs Franþais du Pacifique Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CDF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Congolese Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BAM&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Convertible Marka&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NIO&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Cordobas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GMD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dalasi&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MKD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Denars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CSD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;IQD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;JOD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KWD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LYD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SDD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TND&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AED&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dirhams&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;STD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dobras&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;FJD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GYD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;JMD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LRD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NAD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SBD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SGD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SRD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TTD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;USD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;VND&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dong&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AMD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Drams&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XCD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;East Caribbean Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SZL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Emalangeni&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CVE&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Escudos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;EUR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Euro&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;FKP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Falklands Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HUF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Forint&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BIF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;DJF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GNF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KMF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GIP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Gibraltar Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XAU&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Gold Ounces&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HTG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Gourdes&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GBP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Great Brittain Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PYG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Guarani&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HKD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Hong Kong Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;UAH&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Hryvnia&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XDR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;International Monetary Fund (IMF) Special Drawing Rights&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PGK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kina&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LAK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kips&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CZK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Koruny&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SKK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Koruny&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NOK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Krone&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;DKK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kroner&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SEK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kronor&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ISK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kronur&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;EEK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Krooni&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HRK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kuna&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ZMK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kwacha&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MWK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kwachas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AOA&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kwanza&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MMK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kyats&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GEL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Lari&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LVL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Lati&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MDL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Lei&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ALL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Leke&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HNL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Lempiras&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SLL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Leones&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BGN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Leva&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TRL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Liras [being phased out]&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MTL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Liri&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LTL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Litai&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SPL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Luigini&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LSL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Maloti&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AZM&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Manats&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TMM&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Manats&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MZM&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Meticais&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MAD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Morocco Dirhams&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NGN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Nairas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ERN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Nakfa&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NPR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Nepal Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ANG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Netherlands Antilles Guilders (also called Florins)&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TWD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;RON&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Lei&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TRY&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Lira&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ILS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Shekels&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NZD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Zealand Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BTN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Ngultrum&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;No Universal Currency&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PEN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Nuevos Soles&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MRO&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Ouguiyas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TOP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pa'anga&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XPD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Palladium Ounces&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MOP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Patacas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ARS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CLP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;COP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CUP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;DOP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MXN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PHP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;UYU&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XPT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Platinum Ounces&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CYP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;EGP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GGP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;IMP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;JEP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LBP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SHP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SYP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BWP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pulas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GTQ&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Quetzales&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;IRR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rials&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;OMR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rials&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;QAR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rials&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;YER&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rials&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KHR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Riels&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MYR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Ringgits&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SAR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Riyals&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BYR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rubles&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;RUB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rubles&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MVR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rufiyaa&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;INR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LKR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MUR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PKR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SCR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;IDR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupiahs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;RWF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rwanda Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;RSD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Serbian Dinar&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KES&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Shillings&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SOS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Shillings&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TZS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Shillings&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;UGX&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Shillings&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XAG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Silver Ounces&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TJS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Somoni&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KGS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Soms&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ZAR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;South Africa Rands&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;UZS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Sums&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CHF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Swiss Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BDT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Taka&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;WST&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tala&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KZT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tenge&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SIT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tolars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MNT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tugriks&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TVD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tuvalu Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;VUV&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Vatu&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KPW&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Won&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KRW&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Won&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;JPY&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Yen&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CNY&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Yuan Renminbi&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ZWD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Zimbabwe Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PLN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Zlotych&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+      &lt;/m:ListOfCurrenciesByNameResult&gt;
+    &lt;/m:ListOfCurrenciesByNameResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt; 
+ </msg>
+<msg timestamp="20220922 13:35:01.233" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20220922 13:35:01.233" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220922 13:35:00.847" endtime="20220922 13:35:01.233"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${actual_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220922 13:35:01.233" level="TRACE">Arguments: [ 200 ]</msg>
+<msg timestamp="20220922 13:35:01.233" level="DEBUG">Argument types are:
+&lt;class 'int'&gt;</msg>
+<msg timestamp="20220922 13:35:01.233" level="TRACE">Return: '200'</msg>
+<msg timestamp="20220922 13:35:01.233" level="INFO">${actual_code} = 200</msg>
+<status status="PASS" starttime="20220922 13:35:01.233" endtime="20220922 13:35:01.233"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual_code}</arg>
+<arg>${success_Status_code}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20220922 13:35:01.248" level="TRACE">Arguments: [ '200' | '200' ]</msg>
+<msg timestamp="20220922 13:35:01.248" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg timestamp="20220922 13:35:01.248" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220922 13:35:01.248" endtime="20220922 13:35:01.248"/>
+</kw>
+<doc>Returns a list of currencies ordered by name.</doc>
+<status status="PASS" starttime="20220922 13:35:00.831" endtime="20220922 13:35:01.248"/>
+</test>
+<test id="s1-t5" name="Returning a list of currencies ordered by code Using Post Method" line="37">
+<kw name="Create Header Dictionary" library="Common_keywords">
+<var>&amp;{header_dictionary}</var>
+<msg timestamp="20220922 13:35:01.248" level="TRACE">Arguments: [  ]</msg>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header_dictionary}</var>
+<arg>Content-Type=${content_text_xml}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220922 13:35:01.248" level="TRACE">Arguments: [ 'Content-Type=${content_text_xml}' ]</msg>
+<msg timestamp="20220922 13:35:01.248" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:35:01.248" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:35:01.248" endtime="20220922 13:35:01.248"/>
+</kw>
+<msg timestamp="20220922 13:35:01.248" level="TRACE">Return: {'Content-Type': 'text/xml; charset=utf-8'}</msg>
+<msg timestamp="20220922 13:35:01.248" level="INFO">&amp;{header_dictionary} = { Content-Type=text/xml; charset=utf-8 }</msg>
+<status status="PASS" starttime="20220922 13:35:01.248" endtime="20220922 13:35:01.248"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${base_url}${end_point}</arg>
+<arg>headers=${header_dictionary}</arg>
+<arg>data=${payload_ListOfCurrenciesByCode}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20220922 13:35:01.264" level="TRACE">Arguments: [ 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso' | headers={'Content-Type': 'text/xml; charset=utf-8'} | data='&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;soap:Body&gt;&lt;ListOfCurrenciesByCode xmlns="http://www.oorsprong.org/websamples.countryinfo"&gt;&lt;/ListOfCurrenciesByCode&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;' ]</msg>
+<msg timestamp="20220922 13:35:01.264" level="DEBUG">Starting new HTTP connection (1): webservices.oorsprong.org:80</msg>
+<msg timestamp="20220922 13:35:01.634" level="DEBUG">http://webservices.oorsprong.org:80 "POST /websamples.countryinfo/CountryInfoService.wso HTTP/1.1" 200 3037</msg>
+<msg timestamp="20220922 13:35:01.634" level="INFO">POST Request : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ path_url=/websamples.countryinfo/CountryInfoService.wso 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'text/xml; charset=utf-8', 'Content-Length': '252'} 
+ body=&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;soap:Body&gt;&lt;ListOfCurrenciesByCode xmlns="http://www.oorsprong.org/websamples.countryinfo"&gt;&lt;/ListOfCurrenciesByCode&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt; 
+ </msg>
+<msg timestamp="20220922 13:35:01.634" level="INFO">POST Response : url=http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'private, max-age=0', 'Content-Type': 'text/xml; charset=utf-8', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Server': 'Microsoft-IIS/8.5', 'Web-Service': 'DataFlex 19.1', 'Date': 'Thu, 22 Sep 2022 08:04:59 GMT', 'Content-Length': '3037'} 
+ body=&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;m:ListOfCurrenciesByCodeResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo"&gt;
+      &lt;m:ListOfCurrenciesByCodeResult&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;No Universal Currency&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AED&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dirhams&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AFA&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Afghanis&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ALL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Leke&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AMD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Drams&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ANG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Netherlands Antilles Guilders (also called Florins)&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AOA&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kwanza&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ARS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AUD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Australian Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AWG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Aruba Guilders (also called Florins)&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;AZM&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Manats&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BAM&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Convertible Marka&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BBD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Barbados Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BDT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Taka&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BGN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Leva&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BHD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bahrain Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BIF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BMD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bermuda Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BND&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Brunei Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BOB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bolivianos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BRL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Brazil Real&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BSD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bahamas Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BTN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Ngultrum&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BWP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pulas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BYR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rubles&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;BZD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Belize Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CAD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Canadian Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CDF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Congolese Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CHF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Swiss Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CLP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CNY&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Yuan Renminbi&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;COP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CRC&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Colones&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CSD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CUP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CVE&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Escudos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CYP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;CZK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Koruny&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;DJF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;DKK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kroner&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;DOP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;DZD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Algeria Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;EEK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Krooni&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;EGP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ERN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Nakfa&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ETB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Birr&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;EUR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Euro&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;FJD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;FKP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Falklands Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GBP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Great Brittain Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GEL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Lari&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GGP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GHC&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Cedis&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GIP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Gibraltar Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GMD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dalasi&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GNF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GTQ&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Quetzales&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;GYD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HKD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Hong Kong Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HNL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Lempiras&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HRK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kuna&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HTG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Gourdes&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;HUF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Forint&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;IDR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupiahs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ILS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Shekels&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;IMP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;INR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;IQD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;IRR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rials&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ISK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kronur&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;JEP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;JMD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;JOD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;JPY&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Yen&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KES&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Shillings&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KGS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Soms&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KHR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Riels&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KMF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KPW&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Won&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KRW&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Won&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KWD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KYD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Cayman Island Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;KZT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tenge&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LAK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kips&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LBP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LKR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LRD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LSL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Maloti&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LTL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Litai&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LVL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Lati&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;LYD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MAD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Morocco Dirhams&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MDL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Lei&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MGA&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Ariary&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MKD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Denars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MMK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kyats&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MNT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tugriks&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MOP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Patacas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MRO&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Ouguiyas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MTL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Liri&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MUR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MVR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rufiyaa&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MWK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kwachas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MXN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MYR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Ringgits&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;MZM&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Meticais&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NAD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NGN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Nairas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NIO&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Cordobas&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NOK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Krone&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NPR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Nepal Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;NZD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Zealand Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;OMR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rials&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PAB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Balboa&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PEN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Nuevos Soles&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PGK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kina&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PHP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PKR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PLN&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Zlotych&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;PYG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Guarani&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;QAR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rials&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;RON&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Lei&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;RSD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Serbian Dinar&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;RUB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rubles&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;RWF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rwanda Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SAR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Riyals&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SBD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SCR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rupees&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SDD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SEK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kronor&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SGD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SHP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SIT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tolars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SKK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Koruny&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SLL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Leones&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SOS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Shillings&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SPL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Luigini&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SRD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;STD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dobras&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SVC&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Colones&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SYP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pounds&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;SZL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Emalangeni&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;THB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Baht&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TJS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Somoni&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TMM&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Manats&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TND&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dinars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TOP&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pa'anga&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TRL&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Liras [being phased out]&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TRY&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Lira&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TTD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TVD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tuvalu Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TWD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;New Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;TZS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Shillings&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;UAH&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Hryvnia&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;UGX&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Shillings&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;USD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;UYU&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Pesos&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;UZS&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Sums&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;VEB&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Bolivares&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;VND&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Dong&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;VUV&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Vatu&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;WST&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Tala&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XAF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Communauté Financière Africaine Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XAG&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Silver Ounces&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XAU&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Gold Ounces&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XCD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;East Caribbean Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XDR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;International Monetary Fund (IMF) Special Drawing Rights&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XOF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Communauté Financière Africaine Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XPD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Palladium Ounces&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XPF&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Comptoirs Franþais du Pacifique Francs&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;XPT&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Platinum Ounces&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;YER&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Rials&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ZAR&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;South Africa Rands&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ZMK&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Kwacha&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+        &lt;m:tCurrency&gt;
+          &lt;m:sISOCode&gt;ZWD&lt;/m:sISOCode&gt;
+          &lt;m:sName&gt;Zimbabwe Dollars&lt;/m:sName&gt;
+        &lt;/m:tCurrency&gt;
+      &lt;/m:ListOfCurrenciesByCodeResult&gt;
+    &lt;/m:ListOfCurrenciesByCodeResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt; 
+ </msg>
+<msg timestamp="20220922 13:35:01.634" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20220922 13:35:01.634" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220922 13:35:01.264" endtime="20220922 13:35:01.634"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${actual_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220922 13:35:01.650" level="TRACE">Arguments: [ 200 ]</msg>
+<msg timestamp="20220922 13:35:01.650" level="DEBUG">Argument types are:
+&lt;class 'int'&gt;</msg>
+<msg timestamp="20220922 13:35:01.650" level="TRACE">Return: '200'</msg>
+<msg timestamp="20220922 13:35:01.650" level="INFO">${actual_code} = 200</msg>
+<status status="PASS" starttime="20220922 13:35:01.650" endtime="20220922 13:35:01.650"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual_code}</arg>
+<arg>${success_Status_code}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20220922 13:35:01.650" level="TRACE">Arguments: [ '200' | '200' ]</msg>
+<msg timestamp="20220922 13:35:01.650" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg timestamp="20220922 13:35:01.650" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220922 13:35:01.650" endtime="20220922 13:35:01.650"/>
+</kw>
+<doc>Returns a list of currencies ordered by code.</doc>
+<status status="PASS" starttime="20220922 13:35:01.248" endtime="20220922 13:35:01.650"/>
+</test>
+<doc>Using Soap for request Library</doc>
+<status status="PASS" starttime="20220922 13:34:59.126" endtime="20220922 13:35:01.650"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Requestsoap">Requestsoap</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
